@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="calculator">
+        <h2>Calculateur de calories</h2>
+
+        
+        <h3>Calcul du métabolisme de base (MB)</h3>
+
+        <form id="mb-form">
+            <label for="gender">Sexe:</label>
+            <select id="gender" name="gender">
+                <option value="male">Masculin</option>
+                <option value="female">Féminin</option>
+            </select><br><br>
+
+            <label for="age">Âge:</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="height">Taille (en cm):</label>
+            <input type="number" id="height" name="height" required><br><br>
+
+            <label for="weight">Poids (en kg):</label>
+            <input type="number" id="weight" name="weight" required><br><br>
+
+            <input type="submit" value="Calculer le MB">
+        </form>
+
+       
+        <div id="mb-result"></div>
+
+        <!-- Formulaire pour le calcul de la DEJ -->
+        <h3>Calcul de la dépense énergétique journalière (DEJ)</h3>
+        <form id="dej-form">
+            <label for="nap">Niveau d'activité physique:</label>
+            <select id="nap" name="nap">
+                <option value="1.2">Pas ou peu d'activité (0 à 1x par semaine)</option>
+                <option value="1.4">Légèrement actif (1 à 3x par semaine)</option>
+                <option value="1.6">Actif (4 à 5x par semaine)</option>
+                <option value="1.8">Fortement actif (5 à 6x par semaine)</option>
+                <option value="2">Extrêmement actif (6 à 7x par semaine + métier physique / sportifs professionnels)
+                </option>
+            </select><br><br>
+
+            <input type="submit" value="Calculer la DEJ">
+        </form>
+
+        <!-- Affichage du résultat de la DEJ -->
+        <div id="dej-result"></div>
+
+        <!-- Formulaire pour le choix de l'objectif -->
+         <h3>Quel est votre objectif?</h3>
+        <form id="goal-form">
+            <label for="goal">Objectif:</label>
+            <select id="goal" name="goal">
+                <option value="maintain">Maintenir mon poids</option>
+                <option value="lose">Perdre du poids</option>
+                <option value="gain">Prendre du poids</option>
+            </select><br><br>
+
+            <input type="submit" value="Calculer les besoins en macronutriments">
+        </form>
+
+        <!-- Affichage du résultat des besoins en macronutriments -->
+        <div id="macro-result"></div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
